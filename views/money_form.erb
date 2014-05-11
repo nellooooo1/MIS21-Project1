@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Aling Nena's Online Store </title>
+    <!-- SOURCE CODE FROM http://getbootstrap.com/examples/jumbotron-narrow/-->
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <!-- Header + Nav -->
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/products">Products</a></li>
+        </ul>
+      <h3 class="text-muted">Aling Nena's Online Store</h3>
+      </div> 
+
+<center>
+    <div class="row">
+        <div class="col-md-12">
+        <h1>Buy <%= @product.name %></h1>
+        <form method="POST" action="/money_form/<%= @product.id %>">
+            <label> Total amount to pay: PHP <%= @total_amount %></label>
+            </br>
+            <%= @message %>
+            <br>
+
+            <label>Thousand</label><br>
+            <input placeholder="0" class ="payment" type="text" name="thousand"></br>
+            <label>Five-Hundred</label><br>
+            <input placeholder="0" class ="payment" type="text" name="five_hundred"></br>
+            <label>Hundred</label><br>
+            <input placeholder="0" class ="payment" type="text" name="hundred"></br>
+            <label>Fifty</label><br>
+            <input placeholder="0" class ="payment" type="text" name="fifty"></br>
+            <label>Twenty</label><br>
+            <input placeholder="0" class ="payment" type="text" name="twenty"></br>
+            <label>Ten</label><br>
+            <input placeholder="0" class ="payment" type="text" name="ten"></br>
+            <label>Five</label><br>
+            <input placeholder="0" class ="payment" type="text" name="five"></br>
+            <label>One</label><br>
+            <input placeholder="0" class ="payment" type="text" name="one"></br><br>
+
+            <input class="btn btn-primary" type="submit" value="Finish Transaction">
+            <a href="/products" class="btn btn-danger">Back to Proudcts</a><br>
+        </form>
+      </div>
+      
+    </div>
+</center>
+
+<br>
+      <div class="footer">
+        <p>&copy; Aling Nena's 2014</p>
+      </div>
+    </div>
+  </body>
+  
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+</html>

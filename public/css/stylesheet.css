@@ -1,0 +1,15 @@
+.jumbotron
+{
+	background-image: url(/dark.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+	background-repeat: repeat;
+    color: lightblue;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+body
+{
+	background-image: url(/gray.png);
+	background-attachment: fixed;
+} 
